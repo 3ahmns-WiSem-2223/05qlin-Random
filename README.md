@@ -1,13 +1,20 @@
 # 05qlin-Random
 
 Unterschied System und UnityEngine:
-UnityEngine.Random: Unity bietet eine statische Klasse zum Generieren von Zufallszahlen, was bedeutet, dass Sie kein Objekt in Ihrem Code instanziieren müssen, um es zu verwenden. Verwenden Sie einfach diese Klasse und ihre Methoden, um die Art von Zahlen zu generieren, die Sie für Ihr Spiel benötigen.
-System: Dies ist die Klasse, die von der C#-Sprache bereitgestellt wird, und Unity hat sie einfach mit der gesamten Programmiersprache geerbt. In diesem Fall müssen Sie ein Objekt instanziieren und es ähnlich wie Unity verwenden und Zufallszahlen in Ihrem Spiel generieren.
+
+UnityEngine.Random: Unity bietet eine statische Klasse zum Generieren von pseudo-Zufallswerten und ist einfach zu benutzen. Hier muss man kein Objekt von Data Typ Random instanzieren um es benutzen zu können, sondern ich kann einfach auf die Methoden der Klassen Random mit UnityEngine.Random"MethodenName" zugreifen.
+
+System: Dies ist die Klasse, die von der C#-Sprache bereitgestellt wird, und Unity hat sie einfach mit der gesamten Programmiersprache geerbt. Hier allerdings muss man eine Variable von Data Typ Random instanzieren um darauf zuzugreifen. Der seed Value wird als Anfangswert für die pseudo-Zufallszahl benutzt. Dieser seed Value wird automatisch generiert, damit ich jedes mal andere Zahlen bekomme. 
 
 Beispiel:
 
-Warum könnte man Zufall in Programmieren gebrauchen: Bei Spielen zum Beispiel, ich habe einen würfel und ich will nach jedem mal würfeln eine andere Zufällige Zahl haben.
+UnityEngine:int randomValue = UnityEngine.Random.Range(0, 100);
 
-Warum ist es sinnvoll den Seed zu setzen:Wenn ich überprüfen will ob mein Random überhaupt funktioniert oder nicht.
+System:System.Random random = new System.Random();
+       int randomNumber = random.Next(0, 100);
 
-Was macht Random.Range: Random.Range gibt mir Zufällige zahlen von Random.Range(minValue, maxValue) aus.
+Warum könnte man Zufall in Programmieren gebrauchen: Bei Spielen, zum Beispiel: ich habe einen würfel und ich will nach jedem mal würfeln eine andere Zufällige Zahl haben.
+
+Warum ist es sinnvoll den Seed zu setzen: Wenn ich will das jedes mal das Gleiche "zufällige Muster" erzeugt wird. 
+
+Was macht Random.Range: Random.Range gibt mir Zufällige Zahlen zwischen zwei Zahlen, Random.Range(minValue, maxValue), aus.
