@@ -18,3 +18,7 @@ Warum könnte man Zufall in Programmieren gebrauchen: Bei Spielen, zum Beispiel:
 Warum ist es sinnvoll den Seed zu setzen: Wenn ich will das jedes mal das Gleiche "zufällige Muster" erzeugt wird. 
 
 Was macht Random.Range: Random.Range gibt mir Zufällige Zahlen zwischen zwei Zahlen, Random.Range(minValue, maxValue), aus.
+
+Unity Version: 2020.3.18f
+
+Visual Studio Version: Visual Studio 2019
